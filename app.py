@@ -13,7 +13,7 @@ server = Flask(__name__)
 
 @bot.message_handler(func=lambda message: True, content_types=['new_chat_members'])
 def echo_message(message):
-	bot.send_message(message.chat.id, '<b>Bienvenide! '+message.new_chat_member.first_name + '</b>¿\n\nNos gustaria saber si eres programador y/o programador y de donde eres?',parse_mode='HTML')
+	bot.send_message(message.chat.id, '<b>Bienvenide! '+message.new_chat_member.first_name + '</b>\n\n¿De donde eres?',parse_mode='HTML')
 
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
